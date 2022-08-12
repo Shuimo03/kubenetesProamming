@@ -1,2 +1,3 @@
 # kubenetesProamming
-K8S编程
+
+K8S相关开发的demo，使用client-go。
