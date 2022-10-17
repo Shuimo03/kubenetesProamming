@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeselector
+  labels:
+    name: redis-master
+spec:
+  selector:
+    matchLabels:
+      name: redis-master
+  template:
+    metadata:
+      labels:
+        name: redis-master
+    spec:
+      containers:
+        - name: master
+          image: redis
+          ports:
+            - containerPort: 6379
+      nodeSelector:
+        zone: north

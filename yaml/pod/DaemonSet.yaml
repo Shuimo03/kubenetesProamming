@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: fluentd-cloud-logging
+  namespace: kube-system
+  labels:
+    k8s-app: fluentd-cloud-logging
+spec:
+  selector:
+    matchLabels:
+      name: fluentd-es
+  template:
+    metadata:
+    spec:
+      containers:
+        - name: fluentd-cloud-logging
+          image: elasticsearch
+        - resources:
+            limits:
+              cpu: 100m
+              memory: 200Mi
+        - env:
+            - name: FLUENTD_ARGS
+              value: -q
+        - volumeMounts:
+            - mountPath:
+              name:
