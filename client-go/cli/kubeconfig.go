@@ -3,6 +3,7 @@ package cli
 import (
 	"flag"
 	"k8s.io/client-go/kubernetes"
+	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/util/homedir"
 	"path/filepath"
@@ -26,4 +27,18 @@ func KubeCLI() kubernetes.Clientset {
 		panic("Clientset error")
 	}
 	return *cli
+}
+
+func KubeClient() *rest.RESTClient {
+	config, err := clientcmd.BuildConfigFromFlags("", clientcmd.RecommendedConfigPathFlag)
+	if err != nil {
+		panic(err)
+	}
+
+	//创建client
+	client, err := rest.RESTClientFor(config)
+	if err != nil {
+		panic(err)
+	}
+	return client
 }

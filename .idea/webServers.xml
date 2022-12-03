@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="cc0f7f21-15c1-47f2-8092-93dd9b3eb86b" name="master@192.168.19.138">
-        <fileTransfer rootFolder="/root/kubenetesProamming" accessType="SFTP" host="192.168.19.138" port="22" sshConfigId="4255ade4-356c-45c6-a244-65c942682d1c" sshConfig="root@192.168.19.138:22 password">
+        <fileTransfer rootFolder="/root/kubenetesProamming" accessType="SFTP" host="192.168.52.128" port="22" sshConfigId="4255ade4-356c-45c6-a244-65c942682d1c" sshConfig="root@192.168.52.128:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
