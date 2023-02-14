@@ -1,0 +1,12 @@
+apiVersion: coffeeapp.coffee.domain/v1
+kind: Coffee
+metadata:
+  labels:
+    app.kubernetes.io/name: coffee
+    app.kubernetes.io/instance: coffee-sample
+    app.kubernetes.io/part-of: coffeeoperator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: coffeeoperator
+  name: coffee-sample
+spec:
+  # TODO(user): Add fields here

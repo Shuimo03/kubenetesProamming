@@ -1,0 +1,12 @@
+apiVersion: apps.cola.com/v1
+kind: Cola
+metadata:
+  labels:
+    app.kubernetes.io/name: cola
+    app.kubernetes.io/instance: cola-sample
+    app.kubernetes.io/part-of: app
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: app
+  name: cola-sample
+spec:
+  # TODO(user): Add fields here
